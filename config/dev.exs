@@ -3,7 +3,7 @@ import Config
 # Configure your database
 config :elixir_phoenix_practice, ElixirPhoenixPractice.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "Blah1179",
   database: "elixir_phoenix_practice_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
