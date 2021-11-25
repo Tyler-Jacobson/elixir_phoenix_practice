@@ -21,6 +21,17 @@ defmodule ElixirPhoenixPracticeWeb.Router do
     get "/hello", ElixirPhoenixPracticeController, :index
   end
 
+  scope "/api", ElixirPhoenixPracticeWeb do
+    pipe_through :api
+
+    resources "/example", ExampleController, only: [:index]
+    # resources "/example", ExampleController, only: [:show]
+    get "/example/:id", ExampleController, :show
+
+    get "/goodbye", ElixirPhoenixPracticeController, :index
+
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", ElixirPhoenixPracticeWeb do
   #   pipe_through :api
